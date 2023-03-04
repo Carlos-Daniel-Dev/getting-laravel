@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class UserProfileController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -23,7 +23,7 @@ class UserProfileController extends Controller
      */
     public function create()
     {
-        //
+        dd('create user');
     }
 
     /**
@@ -45,7 +45,7 @@ class UserProfileController extends Controller
      */
     public function show($id)
     {
-        return $id;
+        dd('show');
     }
 
     /**
