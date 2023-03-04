@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ProdutoController extends Controller
+class UserProfileController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +13,7 @@ class ProdutoController extends Controller
      */
     public function index()
     {
-        return "index";
+        //
     }
 
     /**
@@ -45,7 +45,7 @@ class ProdutoController extends Controller
      */
     public function show($id)
     {
-        //
+        return $id;
     }
 
     /**
