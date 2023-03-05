@@ -4,16 +4,26 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class logincontroller extends Controller
+class ProtectedController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct() {
+        // $this->middleware('auth')->only('create');    
+        $this->middleware(function($request, $next) {
+            dd('teste');
+
+            return $next($request);
+        })->except('index');
+    }
+
     public function index()
     {
-        dd('index login');
+        dd('index');
     }
 
     /**
@@ -23,7 +33,7 @@ class logincontroller extends Controller
      */
     public function create()
     {
-        //
+        dd('create');
     }
 
     /**
